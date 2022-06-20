@@ -1,0 +1,6 @@
+top\yuchat\patch\utils\Md5CaculateUtil.class
+top\yuchat\patch\patch\HelpInfo.class
+top\yuchat\patch\utils\ProgressUtils.class
+top\yuchat\patch\utils\ArgsUtils.class
+top\yuchat\patch\YcPatch.class
+top\yuchat\patch\patch\PatchInfo.class
