@@ -22,7 +22,7 @@ import java.util.stream.Stream;
 /**
  * @authoer: yanlongqi
  * @createDate: 2022/6/20
- * @description:
+ * @description: 补丁信息核心方法
  */
 public class PatchInfo {
     private static final String DIR_PATH_KEY = "dirPath";

@@ -33,8 +33,8 @@ public class YcPatch {
                     break;
             }
         } catch (Exception e) {
-            e.printStackTrace();
             System.out.println("\n命令执行错误，获取帮助请使用 --help");
+            e.printStackTrace();
         }
     }
 
