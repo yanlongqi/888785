@@ -55,7 +55,6 @@ public class PatchInfo {
         }
         json.put(FILE_INFO_KEY, fileInfo);
         System.out.println();
-        System.out.println(json);
 
         File file = new File(targetPath);
         FileOutputStream fis = new FileOutputStream(file);
