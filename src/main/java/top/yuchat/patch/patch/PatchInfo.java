@@ -25,6 +25,7 @@ import java.util.stream.Stream;
  * @description: 补丁信息核心方法
  */
 public class PatchInfo {
+
     private static final String DIR_PATH_KEY = "dirPath";
     private static final String FILE_INFO_KEY = "fileInfo";
 
