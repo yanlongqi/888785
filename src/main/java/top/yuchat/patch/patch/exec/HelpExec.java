@@ -1,13 +1,12 @@
-package top.yuchat.patch.patch;
+package top.yuchat.patch.patch.exec;
 
-/**
- * @authoer: yanlongqi
- * @createDate: 2022/6/20
- * @description:
- */
-public class HelpInfo {
+public class HelpExec implements IPatchExec {
+    @Override
+    public void run(String ...args) {
+        printHelpInfo();
+    }
 
-    public static void printHelpInfo(){
+    public void printHelpInfo() {
 
         StringBuffer buffer = new StringBuffer();
         buffer.append("补丁助手帮助信息：\r\n");

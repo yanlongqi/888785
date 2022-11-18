@@ -1,7 +1,7 @@
 package top.yuchat.patch;
 
-import top.yuchat.patch.patch.HelpInfo;
-import top.yuchat.patch.patch.PatchInfo;
+import top.yuchat.patch.patch.Actuator;
+import top.yuchat.patch.patch.ExecConf;
 import top.yuchat.patch.utils.ArgsUtils;
 
 /**
@@ -14,24 +14,9 @@ public class YcPatch {
     public static void main(String[] args) {
 
         try {
-            ArgsUtils utils = new ArgsUtils(args);
-
-            String cmd = utils.getCmd();
-            switch (cmd){
-                case "begin":
-                    PatchInfo.patchBegin(utils.getDirPath(), utils.getTargetPath());
-                    break;
-                case "patch":
-                    PatchInfo.patch(utils.getDirPath(), utils.getTargetPath());
-                    break;
-                case "--help":
-                    HelpInfo.printHelpInfo();
-                    break;
-                default:
-                    System.out.println("命令执行错误，获取帮助请使用 --help");
-                    HelpInfo.printHelpInfo();
-                    break;
-            }
+            ExecConf.initExec();
+            ArgsUtils utils = ArgsUtils.getInstance(args);
+            Actuator.getInstent().run(utils.getCmd(), args);
         } catch (Exception e) {
             System.out.println("\n命令执行错误，获取帮助请使用 --help");
             e.printStackTrace();
